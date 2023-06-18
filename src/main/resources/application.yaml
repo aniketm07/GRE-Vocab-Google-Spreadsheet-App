@@ -1,0 +1,15 @@
+server:
+  port: '3000'
+enable:
+  swagger:
+    ui: 'true'
+spreadsheet:
+  id: #spreadsheetId
+credentials:
+  file:
+    path: /credentials.json
+tokens:
+  directory:
+    path: tokens
+application:
+  name: vocabwords

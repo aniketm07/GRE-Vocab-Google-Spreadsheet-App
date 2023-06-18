@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <title>Words</title>
+</head>
+
+<body>
+<div class="container">
+    <div class=".bg-info">
+        <form th:action="@{/insertWord}" method="POST">
+            <!-- Word Field -->
+            <div class="form-group">
+                <label class="font-weight-bold" for="word">Word</label>
+                <input type="text" class="form-control" id="word" name="word" placeholder="Enter word">
+            </div>
+
+            <!-- Word Definition Field-->
+            <div class="form-group" id="definition">
+                <label class="font-weight-bold">Definitions</label><br>
+                <label for="def1">Definition1</label>
+                <input type="text" class="form-control" id="def1" name="def1" placeholder="Enter definition">
+            </div>
+
+            <!-- Word Synonymous Field-->
+            <div class="form-group">
+                <label class="font-weight-bold">Synonymous Words</label><br>
+                <div class="form-row  w-100" id="alternative">
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="syn1" name="syn1" placeholder="Synonym 1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Word Trick Field-->
+            <div class="form-group">
+                <label class="font-weight-bold" for="trick">Trick</label>
+                <input type="text" class="form-control" id="trick" name="trick" placeholder="Enter trick to remember">
+            </div>
+
+            <!-- Word Sentence Field-->
+            <div class="form-group" id="sentence">
+                <label class="font-weight-bold">Sentences Example</label><br>
+                <label for="def1">Sentence1</label>
+                <input type="text" class="form-control" name="sen1" id="sen1" placeholder="Enter sentence">
+            </div>
+
+            <button type="submit" id="submitButton" class="btn btn-info">Submit</button>
+        </form>
+        <script th:src="@{/js/main.js}"></script>
+    </div>
+</div>
+</body>
+</html>
