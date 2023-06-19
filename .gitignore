@@ -34,8 +34,6 @@ build/
 
 ### mvn ###
 .mvn/
-mvnw
-mvnw.cmd
 
 ### credentials ###
 src/main/resources/credentials.json
